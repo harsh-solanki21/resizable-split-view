@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn build",
+    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false yarn install --prefix client && yarn build --prefix client",
     "docker-start-client": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn build",
     "docker-build-web": "concurrently \"yarn docker-start-client\" \"yarn start\""
   },
