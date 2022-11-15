@@ -1,0 +1,36 @@
+.container {
+  height: 100vh;
+  width: auto;
+}
+
+.tile {
+  min-height: 25%;
+  max-height: 90%;
+  height: 40%;
+  background-color: #f5f5f5;
+}
+
+.subtile {
+  min-width: 15%;
+}
+
+.tileflex {
+  flex: 1;
+}
+
+.top-left {
+  padding: 0px 20px;
+}
+
+.top-right {
+  text-align: center;
+}
+.bottom {
+  padding: 0px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .tile {
+    height: 100%;
+  }
+}

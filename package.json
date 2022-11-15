@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Harsh Solanki",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn build",
+    "docker-start-client": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn build",
+    "docker-build-web": "concurrently \"yarn docker-start-client\" \"yarn start\""
+  },
+  "engines": {
+    "node": "18.12.1"
+  },
+  "dependencies": {
+    "concurrently": "^7.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
