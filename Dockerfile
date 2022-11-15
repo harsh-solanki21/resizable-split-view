@@ -9,10 +9,6 @@ RUN yarn install
 
 COPY . .
 
-ENV PORT=5000
-ENV MONGO_PASS=harsh
-ENV NODE_ENV=production
-
 EXPOSE 5000
 
 CMD [ "yarn", "start" ]
