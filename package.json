@@ -6,7 +6,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "cd client && yarn install && yarn build",
+    "build": "cd client && yarn build",
+    "client-build": "cd client && yarn install",
+    "heroku-postbuild": "yarn run client-build && yarn run build",
     "docker-start-client": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn build",
     "docker-build-web": "concurrently \"yarn docker-start-client\" \"yarn start\""
   },
