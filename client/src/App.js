@@ -11,13 +11,13 @@ function App() {
   const [count, setCount] = useState(0)
 
   const getData = async () => {
-    const res = await axios.get('http://localhost:5000/')
+    const res = await axios.get('/get')
     setData(res.data)
   }
 
   const handleAdd = async () => {
     try {
-      await axios.post('http://localhost:5000/', { data: value })
+      await axios.post('/', { data: value })
       setCount(count + 1)
     } catch (error) {
       console.log(error)
@@ -34,7 +34,7 @@ function App() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/${update}`, { data: edit })
+      await axios.put(`/${update}`, { data: edit })
       setCount(count + 1)
     } catch (error) {
       console.log(error)
