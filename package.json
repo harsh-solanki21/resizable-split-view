@@ -13,7 +13,8 @@
     "docker-build-web": "concurrently \"yarn docker-start-client\" \"yarn start\""
   },
   "engines": {
-    "node": "18.12.1"
+    "node": "18.x",
+    "yarn": "1.x"
   },
   "dependencies": {
     "concurrently": "^7.5.0",
